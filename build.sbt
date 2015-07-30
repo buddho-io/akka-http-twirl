@@ -15,7 +15,7 @@ lazy val root = (project in file("."))
     scalacOptions := Seq("-unchecked", "-deprecation", "-feature"),
     bintrayOrganization := Some("buddho"),
     bintrayRepository := "mvn-public",
-    publishMavenStyle := true,
+    publishMavenStyle := false,
     libraryDependencies ++= Seq(
       "com.typesafe.akka" %% "akka-http-experimental" % "1.0",
       "com.typesafe.play" %% "twirl-api"              % "1.1.1",
