@@ -1,0 +1,22 @@
+language: scala
+scala:
+  - 2.11.7
+script:
+  - sbt test
+after_success:
+  # if this isn't a PR build then publish the artifacts
+  # - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && sbt publish || true'
+cache:
+  directories:
+    - $HOME/.m2
+    - $HOME/.ivy2
+notifications:
+  email:
+    - llinder@gmail.com
+before_install:
+  # if this isn't a PR build then decrypte the GPG keys
+  # - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && sh "${TRAVIS_BUILD_DIR}/travis-ci-bintray-credentials.sh" || true'
+env:
+  # BINTRAY_USERNAME
+  # BINTRAY_API_KEY
+  global:
