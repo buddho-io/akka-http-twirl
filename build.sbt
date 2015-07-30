@@ -10,11 +10,12 @@ lazy val root = (project in file("."))
   .enablePlugins(SbtTwirl, GitVersioning, GitBranchPrompt)
   .settings(
     name := "akka-http-twirl",
-    git.baseVersion := "0.1",
+    git.baseVersion := "0.1.0",
     scalaVersion := "2.11.7",
     scalacOptions := Seq("-unchecked", "-deprecation", "-feature"),
     bintrayOrganization := Some("buddho"),
     bintrayRepository := "mvn-public",
+    publishMavenStyle := true,
     libraryDependencies ++= Seq(
       "com.typesafe.akka" %% "akka-http-experimental" % "1.0",
       "com.typesafe.play" %% "twirl-api"              % "1.1.1",

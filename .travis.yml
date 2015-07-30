@@ -2,7 +2,7 @@ language: scala
 scala:
 - 2.11.7
 script:
-- sbt test
+- sbt scalastyle test
 after_success:
 # if this isn't a PR build then publish the artifacts
 - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && sbt publish || true'
