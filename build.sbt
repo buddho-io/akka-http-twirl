@@ -4,7 +4,7 @@ lazy val root = (project in file("."))
   .settings(
     organization := "io.buddho.akka",
     name := "akka-http-twirl",
-    git.baseVersion := "0.1.1",
+    git.baseVersion := "1.0",
     scalaVersion := "2.11.7",
     scalacOptions := Seq("-unchecked", "-deprecation", "-feature"),
     bintrayOrganization := Some("buddho"),
