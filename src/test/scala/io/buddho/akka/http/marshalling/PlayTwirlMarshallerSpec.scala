@@ -4,18 +4,16 @@ import akka.actor.ActorSystem
 import akka.http.scaladsl.marshalling.Marshal
 import akka.http.scaladsl.model.{MediaTypes, ResponseEntity}
 import akka.stream.ActorMaterializer
-import org.scalatest.{BeforeAndAfterAll, Matchers, FunSpec}
-import scala.concurrent.ExecutionContext.Implicits.global
+import org.scalatest.{BeforeAndAfterAll, FunSpec, Matchers}
 
 import scala.concurrent.Await
+import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration._
 
 
 case class Test(message: String)
 
 class PlayTwirlMarshallerSpec extends FunSpec with PlayTwirlMarshaller with Matchers with BeforeAndAfterAll {
-
-
 
   val test = Test("foo")
   val timeout = 1.second
@@ -42,8 +40,8 @@ class PlayTwirlMarshallerSpec extends FunSpec with PlayTwirlMarshaller with Matc
   }
 
   override def afterAll(): Unit = {
-    system.shutdown()
-    system.awaitTermination()
+    system.terminate()
+    Await.result(system.whenTerminated, 5.seconds)
     super.afterAll()
   }
 
