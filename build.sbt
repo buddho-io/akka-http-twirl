@@ -14,9 +14,10 @@ lazy val root = (project in file("."))
     publishMavenStyle := true,
     licenses += ("Apache-2.0", url("http://www.apache.org/licenses/LICENSE-2.0")),
     libraryDependencies ++= Seq(
-      "com.typesafe.play" %% "twirl-api" % "1.3.0",
-      "com.typesafe.akka" %% "akka-http" % "10.0.0",
-      "org.scalatest"     %% "scalatest" % "3.0.1" % "test"
+      "com.typesafe.play" %% "twirl-api" % "1.4.2",
+      "com.typesafe.akka" %% "akka-http" % "10.1.8",
+      "com.typesafe.akka" %% "akka-stream" % "2.5.26" % Provided,
+      "org.scalatest"     %% "scalatest" % "3.1.0" % Test
     )
   )
 
