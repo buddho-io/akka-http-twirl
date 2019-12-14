@@ -1,4 +1,4 @@
-addSbtPlugin("me.lessis"         % "bintray-sbt"            % "0.3.0")
-addSbtPlugin("com.typesafe.sbt"  % "sbt-twirl"              % "1.3.0")
-addSbtPlugin("com.typesafe.sbt"  % "sbt-git"                % "0.8.5")
-addSbtPlugin("org.scalastyle"    %% "scalastyle-sbt-plugin" % "0.8.0")
+addSbtPlugin("org.foundweekends" % "sbt-bintray"            % "0.5.4")
+addSbtPlugin("com.typesafe.sbt"  % "sbt-twirl"              % "1.5.0")
+addSbtPlugin("com.typesafe.sbt"  % "sbt-git"                % "1.0.0")
+addSbtPlugin("org.scalastyle"    %% "scalastyle-sbt-plugin" % "1.0.0")
